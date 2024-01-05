@@ -164,32 +164,6 @@ mai_san_hobby_replies = [
   'apathetic'
 ]
 
-user_bad_words = [
-  "fuck",
-  'ass',
-  'sex',
-  'fucking',
-  'bitch',
-  'whore',
-  'dick',
-  'pussy',
-  'cunt',
-  'penis',
-  'vagina',
-  'cock',
-  'nigga',
-  'nigger',
-  'ugly'
-]
-
-mai_san_bad_words_replies = [
-  "please don't talk to me like that.",
-  "i don't like that word.",
-  "please don't use that word",
-  "please dont' get ahead of yourself",
-  "don't say these kind of things"
-]
-
 @client.event
 async def on_ready():
   print("We have logged in as {0.user}".format(client))
@@ -234,11 +208,6 @@ async def on_message(message):
     elif any(hobby_question in msg for hobby_question in user_hobby_question):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_hobby_replies))
-
-    elif any(bad_word in msg for bad_word in user_bad_words):
-      time.sleep(1)
-      await message.channel.send(random.choice(mai_san_bad_words_replies))
-
 
 keep_alive()
 
