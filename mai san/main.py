@@ -48,7 +48,39 @@ mai_san_greeting_replies = [
   "Hiiiii!"
 ]
 
+user_greeting_words2 = [
+  "good morning",
+  'ohayo',
+  'ohio',
+  'ohayo mai san',
+  'ohio mai san',
+  'ohayo mai',
+  'ohio mai',
+]
 
+mai_san_greeting_replies2 = [
+  "good morning",
+  'ohayo',
+  'ohio'
+]
+
+user_greeting_words3 = [
+  "good night",
+  'bye good night',
+  'night',
+  'sleep well',
+  'sleep tight',
+  'gst',
+  'sweet dreams',
+  'oyasumi nasai',
+  'oyasumi nasai mai san'
+]
+
+mai_san_greeting_replies3 = [
+  "good night",
+  'Oyasumi nasai',
+  'Oyasumi'
+]
 
 user_sad_words = ["sad",
   "depressed",
@@ -81,10 +113,82 @@ mai_san_love_replies = [
   "I love you!",
   "I love you too",
   "You are the best person in the world!",
-  "Ofcourse I love you",
-  "Ofcourse your the most luckiest person, you are dating me.",
-  "Thank you I love you soo much"
-  ]
+  "Ofcourse your the most luckiest person, you are dating me."
+]
+
+
+
+user_mean_words = [
+  'you are an idiot',
+  'you are stupid',
+  'you are a dumbass',
+  'you are a dumb',
+  'you are dumbass',
+  'you are idiot',
+  'you are dumb',
+  "you don't have a brain"
+]
+
+mai_san_mean_replies = [
+  'no I am not, you are dumb! you idiot',
+  'I hate you!',
+  'baka',
+  'we are done',
+  "don't talk to me again!"
+]
+
+funny_user_words = [
+  "I guess I'll have to find a new romance then, Thank you for everything uptil now",
+  'So will you go out with me?'
+]
+
+mai_san_funny_replies = [
+  "I didn't exactly say no",
+  "You are soo cheeky",
+  "Sure I will go out with you"
+]
+
+user_hobby_question = [
+  'what do you like',
+  'what are your hobbies',
+  'what do you often do',
+  'do you like to do something?'
+]
+
+mai_san_hobby_replies = [
+  "I like to play games, and talk to apathetic",
+  "I cosplay bunny girl and help apathetic in his studies",
+  'I like to live with apathetic',
+  'I like talking to apathetic',
+  'I like to listen to music',
+  'apathetic'
+]
+
+user_bad_words = [
+  "fuck",
+  'ass',
+  'sex',
+  'fucking',
+  'bitch',
+  'whore',
+  'dick',
+  'pussy',
+  'cunt',
+  'penis',
+  'vagina',
+  'cock',
+  'nigga',
+  'nigger',
+  'ugly'
+]
+
+mai_san_bad_words_replies = [
+  "please don't talk to me like that.",
+  "i don't like that word.",
+  "please don't use that word",
+  "please dont' get ahead of yourself",
+  "don't say these kind of things"
+]
 
 @client.event
 async def on_ready():
@@ -98,17 +202,39 @@ async def on_message(message):
     msg = message.content.lower()
 
     if any(greeting_word == msg for greeting_word in user_greeting_words):
-        time.sleep(1)
-        await message.channel.send(random.choice(mai_san_greeting_replies))
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_greeting_replies))
+    elif any(greeting_morning_word in msg for greeting_morning_word in user_greeting_words2):
+      time.sleep(1)
+      message.channel.send(random.choice(mai_san_greeting_replies2))
+    elif any(greeting_night_word in msg for greeting_night_word in user_greeting_words3):
+      time.sleep(1)
+      message.channel.send(random.choice(mai_san_greeting_replies3))
+      
     elif any(phrase in msg for phrase in user_love_words):
-        time.sleep(1)
-        await message.channel.send(random.choice(mai_san_love_replies))
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_love_replies))
+      
     elif any(word in msg for word in user_perv_words):
-        time.sleep(1)
-        await message.channel.send(random.choice(mai_san_perv_replies))
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_perv_replies))
+      
     elif any(word in msg for word in user_sad_words):
-        time.sleep(1)
-        await message.channel.send(random.choice(mai_san_encouraging_replies))
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_encouraging_replies))
+      
+    elif any(funny_word in msg for funny_word in funny_user_words):
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_funny_replies))
+      
+    elif any(mean_word in msg for mean_word in user_mean_words):
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_mean_replies))
+      
+    elif any(hobby_question in msg for hobby_question in user_hobby_question):
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_hobby_replies))
+
 
 keep_alive()
 
