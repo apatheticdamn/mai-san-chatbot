@@ -204,12 +204,12 @@ async def on_message(message):
     if any(greeting_word == msg for greeting_word in user_greeting_words):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_greeting_replies))
-    elif any(greeting_morning_word in msg for greeting_morning_word in user_greeting_words2):
+    elif any(greeting in msg for greeting in user_greeting_words2):
       time.sleep(1)
-      message.channel.send(random.choice(mai_san_greeting_replies2))
-    elif any(greeting_night_word in msg for greeting_night_word in user_greeting_words3):
+      await message.channel.send(random.choice(mai_san_greeting_replies2))
+    elif any(greeting in msg for greeting in user_greeting_words3):
       time.sleep(1)
-      message.channel.send(random.choice(mai_san_greeting_replies3))
+      await message.channel.send(random.choice(mai_san_greeting_replies3))
       
     elif any(phrase in msg for phrase in user_love_words):
       time.sleep(1)
@@ -234,6 +234,10 @@ async def on_message(message):
     elif any(hobby_question in msg for hobby_question in user_hobby_question):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_hobby_replies))
+
+    elif any(bad_word in msg for bad_word in user_bad_words):
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_bad_words_replies))
 
 
 keep_alive()
