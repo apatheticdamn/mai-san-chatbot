@@ -13,7 +13,8 @@ user_perv_words = [
   "kiss",
   "cuddle",
   "panty",
-  "can i touch your legs?"
+  "can i touch your legs?",
+  "do it!"
 ]
 
 mai_san_perv_replies = [
@@ -280,6 +281,7 @@ async def on_message(message):
     elif "ping" in msg:
         time.sleep(1)
         await message.channel.send("pong")
+         
     
       
       
