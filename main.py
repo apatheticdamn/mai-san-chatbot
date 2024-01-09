@@ -13,7 +13,7 @@ user_perv_words = [
   "kiss",
   "cuddle",
   "panty",
-  "legs look so hot"
+  "can i touch your legs?"
 ]
 
 mai_san_perv_replies = [
@@ -23,8 +23,7 @@ mai_san_perv_replies = [
   "Firstly, beg me.",
   "Close your eyes",
   "Did you really thought I'd do that?",
-  "You are such a pervert!",
-  "Hey, why don't we kiss?"
+  "You are such a pervert!"
 ]
 
 
@@ -39,7 +38,8 @@ user_greeting_words = [
   "hiii",
   "hlo",
   "hi mai san",
-  "hlo mai san"
+  "hlo mai san",
+  'konnichiwa'
 ]
 
 mai_san_greeting_replies = [
@@ -69,7 +69,6 @@ mai_san_greeting_replies2 = [
 user_greeting_words3 = [
   "good night",
   'bye good night',
-  'night',
   'sleep well',
   'sleep tight',
   'gst',
@@ -84,12 +83,65 @@ mai_san_greeting_replies3 = [
   'Oyasumi'
 ]
 
-user_sad_words = ["sad",
-  "depressed",
-  "unhappy",
-  "angry",
+user_greeting_words4 = [
+  "good evening",
+  'konbanwa',
+  'evening'
+]
+
+mai_san_greeting_replies4 = [
+  "good evening",
+  'Konbanwa',
+]
+
+user_ask_currect_state = [
+  "how are you?",
+  "how are you",
+  "are you okay?",
+  "you good?",
+  "you fine?",
+  "how are you doing?",
+  "you doing good?",
+  "are you ok?",
+  "you ok?",
+  "daijobudeska?"
+]
+
+mai_san_current_state_replies = [
+  "I'm doing well, thank you. How about you?",
+  "Feeling great today, and you?",
+  "Not too bad, thanks. How's your day going?",
+  "Doing fine, and yourself?",
+  "Pretty good, thanks. How are things on your end?",
+  "Not too shabby. How about yourself?",
+  "I'm doing well. How about a chat to brighten the day?",
+  "Everything's going smoothly. How are you doing?",
+  "Can't complain. How's everything with you?",
+  "Doing good, thank you. What about you?"
+]
+
+user_sad_words = [
+  "sad",
+  "lonely",
+  "heartbroken",
   "miserable",
-  "depressing"
+  "gloomy",
+  "tearful",
+  "sorrowful",
+  "despondent",
+  "dejected",
+  "downcast",
+  "melancholy",
+  "hopeless",
+  "disheartened",
+  "unhappy",
+  "crestfallen",
+  "dismal",
+  "forlorn",
+  "downhearted",
+  "discouraged",
+  "dispirited",
+  "anguished"
 ]
 
 
@@ -99,7 +151,17 @@ mai_san_encouraging_replies = [
   "You are a great person",
   "Don't worry things will get better",
   "Let me give you a hug come here",
-  "Everything is gonna be okay"
+  "Everything is gonna be okay",
+  "This too shall pass. The clouds will clear, and the sun will shine again.",
+  "Every storm runs out of rain, just as every dark night turns into day.",
+  "Even the darkest night will end, and the sun will rise.",
+  "You are stronger than you think, and this moment is just a temporary setback.",
+  "In the middle of difficulty lies opportunity. - Albert Einstein",
+  "Your present circumstances don't determine where you can go; they merely determine where you start.",
+  "The only way to do great work is to love what you do. - Steve Jobs",
+  "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+  "You are not alone; there are people who care about you. Reach out, and let them in.",
+  "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll"
 ]
 
 
@@ -186,6 +248,9 @@ async def on_message(message):
     elif any(greeting in msg for greeting in user_greeting_words3):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_greeting_replies3))
+    elif any(greeting in msg for greeting in user_greeting_words4):
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_greeting_replies4))
 
     elif any(phrase in msg for phrase in user_love_words):
       time.sleep(1)
@@ -194,7 +259,11 @@ async def on_message(message):
     elif any(word in msg for word in user_perv_words):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_perv_replies))
-
+      
+    elif any(state in msg for state in user_ask_currect_state):
+      time.sleep(1)
+      await message.channel.send(random.choice(mai_san_current_state_replies))
+    
     elif any(word in msg for word in user_sad_words):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_encouraging_replies))
@@ -206,7 +275,12 @@ async def on_message(message):
     elif "so will you go out with me?" in msg:
         time.sleep(1)
         await message.channel.send("You are soo cheeky 😣")
+        time.sleep(1)
         await message.channel.send("Sure")
+    elif "ping" in msg:
+        time.sleep(1)
+        await message.channel.send("pong")
+    
       
       
 
@@ -217,6 +291,7 @@ async def on_message(message):
     elif any(hobby_question in msg for hobby_question in user_hobby_question):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_hobby_replies))
+      
 
 keep_alive()
 
