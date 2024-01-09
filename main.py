@@ -6,6 +6,7 @@ intents.messages = True
 intents.guilds = True
 intents.message_content = True 
 client = discord.Client(intents=intents)
+
 user_perv_words = [
   "boob",
   "boobs",
@@ -14,7 +15,6 @@ user_perv_words = [
   "cuddle",
   "panty",
   "can i touch your legs?",
-  "do it!"
 ]
 
 mai_san_perv_replies = [
@@ -203,14 +203,14 @@ mai_san_mean_replies = [
 ]
 
 funny_user_words = [
-  "I guess I'll have to find a new romance then, Thank you for everything uptil now",
-  'So will you go out with me?'
+  "I guess I will have to find a new romance then, Thank you for everything uptil now",
+  "So, will you go out with me?"
 ]
 
 mai_san_funny_replies = [
   "I didn't exactly say no",
   "You are soo cheeky",
-  "Sure I will go out with you"
+  "Sure, I will go out with you"
 ]
 
 user_hobby_question = [
@@ -269,22 +269,13 @@ async def on_message(message):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_encouraging_replies))
     
-    elif "i guess i'll have to find a new romance then, thank you for everything uptil now" in msg:
+    elif any(word in msg for word in funny_user_words):
         time.sleep(1)
-        await message.channel.send("I didn't exactly say no")
-      
-    elif "so will you go out with me?" in msg:
-        time.sleep(1)
-        await message.channel.send("You are soo cheeky 😣")
-        time.sleep(1)
-        await message.channel.send("Sure")
+        await message.channel.send(mai_san_funny_replies)
+    
     elif "ping" in msg:
         time.sleep(1)
-        await message.channel.send("pong")
-         
-    
-      
-      
+        await message.channel.send("pong")  
 
     elif any(mean_word in msg for mean_word in user_mean_words):
       time.sleep(1)
