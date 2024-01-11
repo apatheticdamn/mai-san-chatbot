@@ -7,26 +7,6 @@ intents.guilds = True
 intents.message_content = True 
 client = discord.Client(intents=intents)
 
-user_perv_words = [
-  "boob",
-  "boobs",
-  "panties",
-  "kiss",
-  "cuddle",
-  "panty",
-  "can i touch your legs?",
-]
-
-mai_san_perv_replies = [
-  "You are such a pervert!",
-  "Don't you dare get near me!",
-  "What if I said no?",
-  "Firstly, beg me.",
-  "Close your eyes",
-  "Did you really thought I'd do that?",
-  "You are such a pervert!"
-]
-
 
 user_greeting_words = [
   "hello",
@@ -229,6 +209,28 @@ mai_san_hobby_replies = [
   'apathetic'
 ]
 
+user_perv_words = [
+  "boob",
+  "boobs",
+  "panties",
+  "kiss",
+  "cuddle",
+  "panty",
+  "can i touch your legs?",
+]
+
+mai_san_perv_replies = [
+  "You are such a pervert!",
+  "Don't you dare get near me!",
+  "What if I said no?",
+  "Firstly, beg me.",
+  "Close your eyes",
+  "Did you really thought I'd do that?",
+  "You are such a pervert!"
+]
+
+
+
 @client.event
 async def on_ready():
   print("We have logged in as {0.user}".format(client))
@@ -239,6 +241,7 @@ async def on_message(message):
         return
 
     msg = message.content.lower()
+    print(f"Received message: {msg}")
 
     if any(greeting_word == msg for greeting_word in user_greeting_words):
       time.sleep(1)
@@ -260,19 +263,20 @@ async def on_message(message):
     elif any(word in msg for word in user_perv_words):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_perv_replies))
-      
+
     elif any(state in msg for state in user_ask_currect_state):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_current_state_replies))
-    
+
     elif any(word in msg for word in user_sad_words):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_encouraging_replies))
-    
+
     elif any(word in msg for word in funny_user_words):
         time.sleep(1)
+        print("processing")
         await message.channel.send(mai_san_funny_replies)
-    
+
     elif "ping" in msg:
         time.sleep(1)
         await message.channel.send("pong")  
@@ -284,7 +288,7 @@ async def on_message(message):
     elif any(hobby_question in msg for hobby_question in user_hobby_question):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_hobby_replies))
-      
+
 
 keep_alive()
 
