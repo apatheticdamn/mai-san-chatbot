@@ -12,7 +12,7 @@ Mai San is a fun and lighthearted chatbot designed to bring a touch of humor to 
 
 ## Usage
 
-To interact with Mai San, join my discord https://discord.gg/QaUEhh7P3g.<br>You can use natural language or try out different prompts to see how Mai San responds. Keep in mind that the chatbot's responses are generated based on patterns learned during training and may not always be contextually accurate.
+To interact with Mai San, join my discord https://discord.gg/QaUEhh7P3g.<br>You can use natural language or try out different prompts to see how Mai San responds. Keep in mind that the chatbot's responses may not always be contextually accurate.
 
 ```bash
 # Example
