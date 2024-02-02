@@ -15,6 +15,8 @@ Mai San is a fun and lighthearted chatbot designed to bring a touch of humor to 
 To interact with Mai San, join my discord https://discord.gg/QaUEhh7P3g.<br>You can use natural language or try out different prompts to see how Mai San responds. Keep in mind that the chatbot's responses may not always be contextually accurate.
 
 ## Example
-[![Mai San Response 1](mai-san1.jpg)]
-[![Mai San Response 2](mai-san2.png)]
+<div style="display:flex;">
+    <img src="mai-san1.jpg" alt="Mai San Response 1" style="width:150px; margin-right:10px;">
+    <img src="mai-san2.png" alt="Mai San Response 2" style="width:150px;">
+</div>
 
