@@ -24,11 +24,15 @@ user_greeting_words = [
 ]
 
 mai_san_greeting_replies = [
-  "Hiii!",
-  "Hello!",
-  "Hey!",
   "Hi!",
-  "Hiiiii!"
+  "Hey, don't make this a habit.",
+    "Sup. Try not to bore me.",
+    "Wassup. Don't expect a thrilling conversation.",
+    "Hii, but I'm not promising anything interesting.",
+    "Hiii! Just remember, I have a limited tolerance for small talk.",
+    "Hi Mai San. Try not to annoy me too much.",
+    "Hlo Mai San. Keep it short, I'm not in the mood.",
+    "Konnichiwa. Don't expect me to be cheerful just because it's daytime."
 ]
 
 user_greeting_words2 = [
