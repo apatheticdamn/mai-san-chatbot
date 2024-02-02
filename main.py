@@ -268,8 +268,17 @@ mai_san_perv_replies = [
   "Firstly, beg me.",
   "Close your eyes",
   "Did you really thought I'd do that?",
-  "You are such a pervert!"
+  "Haha, nice try. No!",
+    "Hmm, let me think... Still no.",
+    "Flattery won't work. The answer is no.",
+    "I appreciate the offer, but I'll have to decline.",
+    "Not today, maybe not ever.",
+    "I'm flattered, but I have to say no.",
+    "Sorry, I have other plans... like not going out with you.",
+    "That's a hard pass from me.",
+    "Let's keep it platonic, okay?"
 ]
+
 
 
 
