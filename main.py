@@ -215,7 +215,11 @@ mai_san_mean_replies = [
   'I hate you!',
   'baka',
   'we are done',
-  "don't talk to me again!"
+  "don't talk to me again!",
+   "Congratulations, you just earned yourself a one-way ticket to my ignore list.",
+   "You're as creative as a rock. Maybe try being less predictable next time.",
+  "Is that the best insult you can come up with? Pathetic.",
+  
 ]
 
 funny_user_words = [
