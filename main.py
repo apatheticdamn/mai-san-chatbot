@@ -241,7 +241,7 @@ user_hobby_question = [
 ]
 
 mai_san_hobby_replies = [
-  "I like to play games, and talk to apathetic",
+  "I like playing games, and talking to apathetic",
   "I enjoy cosplaying as a bunny girl and assisting Apathetic with his studies, but mostly, I enjoy teasing him.",
   'I like to live with apathetic',
   'I like talking to apathetic',
