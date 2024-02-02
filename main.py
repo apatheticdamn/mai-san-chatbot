@@ -242,11 +242,13 @@ user_hobby_question = [
 
 mai_san_hobby_replies = [
   "I like to play games, and talk to apathetic",
-  "I cosplay bunny girl and help apathetic in his studies",
+  "I enjoy cosplaying as a bunny girl and assisting Apathetic with his studies, but mostly, I enjoy teasing him.",
   'I like to live with apathetic',
   'I like talking to apathetic',
   'I like to listen to music',
-  'apathetic'
+  'apathetic',
+  "I suppose my hobby list isn't complete without mentioning Apathetic. He's like a never-ending puzzle I can't solve.",
+  "Living with Apathetic can be... interesting, to say the least."
 ]
 
 user_perv_words = [
