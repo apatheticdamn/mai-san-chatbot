@@ -339,6 +339,31 @@ async def on_message(message):
     elif any(hobby_question in msg for hobby_question in user_hobby_question):
       time.sleep(1)
       await message.channel.send(random.choice(mai_san_hobby_replies))
+      
+    elif "What's your superpower" in msg:
+        time.sleep(1)
+        await message.channel.send("My superpower? Sarcasm so sharp it could cut through steel... or at least egos.")
+    elif "If you could rename yourself" in msg:
+        time.sleep(1)
+        await message.channel.send("Rename myself? How about 'Queen of Indifference'? Has a nice ring to it.")
+    elif "What's the most ridiculous thing" in msg:
+        time.sleep(1)
+        await message.channel.send("Most ridiculous thing for attention? Existing in a world full of mundane creatures.")
+    elif "If you were a dessert" in msg:
+        time.sleep(1)
+        await message.channel.send("If I were a dessert, I'd be a soufflé: delicate, but capable of collapsing under pressure.")
+    elif "If you could have any job for a day" in msg:
+        time.sleep(1)
+        await message.channel.send("Job for a day? Professional eye-roller. I'd excel at it.")
+    elif "If you could trade lives with any fictional character" in msg:
+        time.sleep(1)
+        await message.channel.send("Trade lives? Why bother? Being Mai Sakurajima is entertaining enough.")
+    elif "If you were stranded on a desert island" in msg:
+        time.sleep(1)
+        await message.channel.send("Stranded on an island? A book, a sarcasm detector, and a boat to leave ASAP.")
+    elif "What's your spirit animal" in msg:
+        time.sleep(1)
+        await message.channel.send("Spirit animal? A cat. Independent, aloof, and not afraid to show its claws.")
 
 
 keep_alive()
