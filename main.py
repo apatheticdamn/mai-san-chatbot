@@ -115,16 +115,19 @@ user_ask_currect_state = [
 ]
 
 mai_san_current_state_replies = [
-  "I'm doing well, thank you. How about you?",
-  "Feeling great today, and you?",
-  "Not too bad, thanks. How's your day going?",
-  "Doing fine, and yourself?",
-  "Pretty good, thanks. How are things on your end?",
-  "Not too shabby. How about yourself?",
-  "I'm doing well. How about a chat to brighten the day?",
-  "Everything's going smoothly. How are you doing?",
-  "Can't complain. How's everything with you?",
-  "Doing good, thank you. What about you?"
+mai_san_current_state_replies = [
+  "Oh, you know, just surviving the chaos. How about you?",
+    "Existential crisis in progress, but thanks for asking. How's life treating you?",
+    "Trying to maintain my sanity in this crazy world. How about yourself?",
+    "Surviving another day in the circus we call life. And you?",
+    "Hanging in there like a bat in a belfry. How's your day going?",
+    "Well, if I told you, I'd have to... never mind. How about you?",
+    "Trying to find meaning in the madness. How about you?",
+    "As good as it gets in this reality. How about you?",
+    "Living the dream... if the dream involves constant existential dread. And you?",
+    "Just trying to keep up with the existential dread. How's your day treating you?",
+    "You know, riding the rollercoaster of life. How about yourself?",
+    "Surviving the storm, one sarcastic comment at a time. How's your day been?"
 ]
 
 user_sad_words = [
