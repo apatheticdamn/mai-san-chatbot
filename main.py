@@ -115,7 +115,6 @@ user_ask_currect_state = [
 ]
 
 mai_san_current_state_replies = [
-mai_san_current_state_replies = [
   "Oh, you know, just surviving the chaos. How about you?",
     "Existential crisis in progress, but thanks for asking. How's life treating you?",
     "Trying to maintain my sanity in this crazy world. How about yourself?",
