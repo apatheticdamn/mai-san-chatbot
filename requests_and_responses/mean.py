@@ -10,7 +10,6 @@ mean_requests = [
 ]
 
 mean_responses = [
-    "no I am not, you are dumb! you idiot",
     "I hate you!",
     "baka",
     "we are done",
