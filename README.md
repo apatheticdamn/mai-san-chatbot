@@ -16,7 +16,7 @@ To interact with Mai San, join my discord https://discord.gg/QaUEhh7P3g.<br>You 
 
 ## Example
 <div style="display:flex;">
-    <img src="mai-san1.jpg" alt="Mai San Response 1" style="width:150px; margin-right:10px;">
-    <img src="mai-san2.png" alt="Mai San Response 2" style="width:150px;">
+    <img src="/public/images/mai-san1.jpg" alt="Mai San Response 1" style="width:150px; margin-right:10px;">
+    <img src="/public/images/mai-san2.png" alt="Mai San Response 2" style="width:150px;">
 </div>
 
