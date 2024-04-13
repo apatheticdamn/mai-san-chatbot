@@ -19,6 +19,7 @@ intents.guilds = True
 intents.message_content = True
 client = discord.Client(intents=intents)
 
+
 @client.event
 async def on_ready():
     print("We have logged in as {0.user}".format(client))
@@ -32,10 +33,10 @@ async def on_message(message):
     msg = message.content.lower()
     print(f"Received message: {msg}")
 
-    if "ping" in msg: 
+    if "ping" in msg:
         time.sleep(1)
-        await message.channel.send("pong")    
- 
+        await message.channel.send("pong")
+
     elif any(msg == phrase for phrase in greeting_requests):
         time.sleep(1)
         await message.channel.send(random.choice(greeting_responses))
@@ -64,11 +65,6 @@ async def on_message(message):
         time.sleep(1)
         await message.channel.send(random.choice(encouraging_responses))
 
-    elif any(msg == phrase for phrase in wholesome_requests):
-        time.sleep(1)
-        print("processing")
-        await message.channel.send(random.choice(wholesome_responses))
-
     elif any(msg == phrase for phrase in mean_requests):
         time.sleep(1)
         await message.channel.send(random.choice(mean_responses))
@@ -76,7 +72,6 @@ async def on_message(message):
     elif any(msg == phrase for phrase in hobby_requests):
         time.sleep(1)
         await message.channel.send(random.choice(hobby_responses))
-
 
 
 keep_alive()
