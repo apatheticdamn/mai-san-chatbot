@@ -1,6 +1,6 @@
 wholesome_requests = [
-    "I guess I will have to find a new romance then, Thank you for everything uptil now",
-    "So, will you go out with me?",
+    "I guess I will have to find a new romance then",
+    "So, will you go out with me?"
 ]
 
 wholesome_responses = [
