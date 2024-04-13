@@ -32,54 +32,51 @@ async def on_message(message):
     msg = message.content.lower()
     print(f"Received message: {msg}")
 
-    if "ping" in msg:
+    if "ping" in msg: 
         time.sleep(1)
-        await message.channel.send("pong")
-
-    elif any(word in msg for word in greeting_requests):
+        await message.channel.send("pong")    
+ 
+    elif any(msg == phrase for phrase in greeting_requests):
         time.sleep(1)
         await message.channel.send(random.choice(greeting_responses))
 
-    elif any(word == msg for word in social_greeting):
-        time.sleep(1)
-        await message.channel.send(random.choice(social_greeting_replies))
-
-    elif any(word in msg for word in morning_requests):
+    elif any(msg == phrase for phrase in morning_requests):
         time.sleep(1)
         await message.channel.send(random.choice(morning_responses))
 
-    elif any(word in msg for word in evening_requests):
+    elif any(msg == phrase for phrase in evening_requests):
         time.sleep(1)
         await message.channel.send(random.choice(evening_responses))
 
-    elif any(word in msg for word in love_requests):
+    elif any(msg == phrase for phrase in love_requests):
         time.sleep(1)
         await message.channel.send(random.choice(love_responses))
 
-    elif any(word in msg for word in pervy_requests):
+    elif any(msg == phrase for phrase in pervy_requests):
         time.sleep(1)
         await message.channel.send(random.choice(pervy_responses))
 
-    elif any(word in msg for word in social_greeting):
+    elif any(msg == phrase for phrase in social_greeting):
         time.sleep(1)
         await message.channel.send(random.choice(social_greeting_replies))
 
-    elif any(word in msg for word in sad_requests):
+    elif any(msg == phrase for phrase in sad_requests):
         time.sleep(1)
         await message.channel.send(random.choice(encouraging_responses))
 
-    elif any(word in msg for word in wholesome_requests):
+    elif any(msg == phrase for phrase in wholesome_requests):
         time.sleep(1)
         print("processing")
-        await message.channel.send(wholesome_responses)
+        await message.channel.send(random.choice(wholesome_responses))
 
-    elif any(word in msg for word in mean_requests):
+    elif any(msg == phrase for phrase in mean_requests):
         time.sleep(1)
         await message.channel.send(random.choice(mean_responses))
 
-    elif any(word in msg for word in hobby_requests):
+    elif any(msg == phrase for phrase in hobby_requests):
         time.sleep(1)
         await message.channel.send(random.choice(hobby_responses))
+
 
 
 keep_alive()
