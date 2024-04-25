@@ -10,7 +10,6 @@ from requests_and_responses.morning import *
 from requests_and_responses.night import *
 from requests_and_responses.pervy import *
 from requests_and_responses.sad import *
-from requests_and_responses.wholesome import *
 
 
 intents = discord.Intents.default()
